@@ -29,17 +29,17 @@ func main() {
 	logrus.Info("Version is ", os.Getenv("API_VERSION"))
 	logrus.Info("Starting Server on http://localhost:", os.Getenv("API_PORT"))
 
-	// // Set log level
-	// switch os.Getenv("LOG_LEVEL") {
-	// case "debug":
-	// 	logrus.SetLevel(logrus.ErrorLevel)
-	// case "info":
-	// 	logrus.SetLevel(logrus.ErrorLevel)
-	// case "warn":
-	// 	logrus.SetLevel(logrus.ErrorLevel)
-	// default:
-	// 	logrus.SetLevel(logrus.ErrorLevel)
-	// }
+	// Set log level
+	switch os.Getenv("LOG_LEVEL") {
+	case "debug":
+		logrus.SetLevel(logrus.ErrorLevel)
+	case "info":
+		logrus.SetLevel(logrus.ErrorLevel)
+	case "warn":
+		logrus.SetLevel(logrus.ErrorLevel)
+	default:
+		logrus.SetLevel(logrus.ErrorLevel)
+	}
 
 	// Creates the database schema
 	migrateDatabase()

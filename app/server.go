@@ -12,8 +12,8 @@ func NewServer() *negroni.Negroni {
 	// Define the global middlewares
 	server := negroni.New()
 	server.Use(gzip.Gzip(gzip.DefaultCompression))
-	server.Use(middlewares.CORSMiddleware())
-	server.Use(middlewares.SecureMiddleware())
+	// server.Use(middlewares.CORSMiddleware())
+	// server.Use(middlewares.SecureMiddleware())
 	// server.Use(middlewares.Auth0Middleware())
 	server.Use(middlewares.LogMiddleware())
 
