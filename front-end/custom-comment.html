@@ -30,6 +30,7 @@
 <!-- Custom Comment Js -->
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 <script>
+  var apiUrl = "http://localhost:3000"
   var domainName = "youdomain.com";
   var pathName = "{{ page.url }}".replace(/\//g, '');
 
@@ -38,7 +39,7 @@
     var name = $("#custom-comment-name").val();
     var email = $("#custom-comment-email").val();
     $.ajax({
-      url: 'http://localhost:3000/api/comments',
+      url: `${apiUrl}/api/comments`,
       type: 'POST',
       data: JSON.stringify({
         Domain: domainName,
@@ -57,7 +58,7 @@
   }
 
   function getComment() {
-    $.get(`http://localhost:3000/api/comments/${domainName}/${pathName}`, function (data) {
+    $.get(`${apiUrl}/api/comments/${domainName}/${pathName}`, function (data) {
       var comments = data.reverse();
 
       if (comments.length) {
