@@ -1,4 +1,6 @@
-# Boilerplate for REST API in go
+# Boilerplate for REST API in Golang
+
+Create Comment micro function for Jekyll blog.
 
 ## Get started
 
@@ -6,7 +8,6 @@
 
 | Operation | Command      | Description |
 | --------- | ------------ | ----------- |
-| **serve** | `fresh *`    | Runs the app and restarts if a change happened |
 | **run**   | `go run *`   | Runs the app |
 | **build** | `go build *` | Builds the app. |
 
