@@ -17,3 +17,7 @@ Create Comment micro function for Jekyll blog.
 - **Middlewares** [negroni](https://github.com/urfave/negroni)
 - **ORM** [gorm](http://jinzhu.me/gorm/)
 - **Logger** [logrus](https://github.com/sirupsen/logrus)
+
+## Preview
+
+![Preview](http://imageshack.com/a/img924/7460/ssIUci.png "Preview")
