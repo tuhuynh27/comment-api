@@ -20,4 +20,4 @@ Create Comment micro function for Jekyll blog.
 
 ## Preview
 
-![Preview](http://imageshack.com/a/img924/7460/ssIUci.png "Preview")
+![Preview](http://imageshack.com/a/img922/7466/FNQlzw.png "Preview")
