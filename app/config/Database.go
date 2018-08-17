@@ -10,11 +10,10 @@ import (
 
 var gormConn *gorm.DB
 
-// GetDatabaseConnection returns gorm connection
-func GetDatabaseConnection() *gorm.DB {
-	// Check if a connection allready exists
+// InitDB ...
+func InitDB(){
 	if gormConn != nil && gormConn.DB() != nil && gormConn.DB().Ping() == nil {
-		return gormConn
+		return
 	}
 
 	// Try to connect to the database
@@ -25,6 +24,10 @@ func GetDatabaseConnection() *gorm.DB {
 
 	// Store the connection in package variable for furher request
 	gormConn = conn
+}
 
+// GetDatabaseConnection returns gorm connection
+func GetDatabaseConnection() *gorm.DB {
+	// Check if a connection allready exists
 	return gormConn
 }

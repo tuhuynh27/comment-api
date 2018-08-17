@@ -2,7 +2,7 @@
 # docker build -t goapi .
 # sudo docker run -p 3000:3000 goapi
 
-FROM golang
+FROM golang:1.10.3
 
 RUN mkdir -p usr/src/app
 

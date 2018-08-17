@@ -9,9 +9,9 @@ import (
 	"github.com/joho/godotenv"
 	"github.com/sirupsen/logrus"
 
-	"github.com/w3tecch/go-api-boilerplate/app"
-	"github.com/w3tecch/go-api-boilerplate/app/config"
-	"github.com/w3tecch/go-api-boilerplate/app/models"
+	"./app"
+	"./app/config"
+	"./app/models"
 )
 
 func main() {
@@ -20,6 +20,7 @@ func main() {
 	if err != nil {
 		logrus.Fatal("Error loading .env file")
 	}
+	config.InitDB()
 
 	// Check database connection
 	db := config.GetDatabaseConnection()
